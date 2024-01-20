@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableTransactionManagement
-@EnableAspectJAutoProxy
 public class ZtiProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ZtiProjectApplication.class, args);
