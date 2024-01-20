@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/reservations")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class ReservationsController {
     private final ReservationRepository reservationRepository;
     private final ReservationToReservationResponseMapper reservationToReservationResponseMapper;

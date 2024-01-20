@@ -14,7 +14,7 @@ import zti.zti_project.repository.UsersRepository;
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class UsersController {
     private final UsersRepository usersRepository;
     private final PasswordEncoder passwordEncoder;

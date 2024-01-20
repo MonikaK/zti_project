@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/repertoire")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class RepertoireController {
     private final RepertoireRepository repertoireRepository;
     private final RepertoireToRepertoireResponseMapper repertoireToRepertoireResponseMapper;

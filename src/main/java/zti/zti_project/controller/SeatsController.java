@@ -14,7 +14,7 @@ import zti.zti_project.repository.SeatsRepository;
 @RequestMapping("/api/seats")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class SeatsController {
     private final SeatsRepository seatsRepository;
 

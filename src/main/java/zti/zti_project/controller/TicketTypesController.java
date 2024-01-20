@@ -15,7 +15,7 @@ import zti.zti_project.repository.TicketTypeRepository;
 @RequestMapping("/api/tickets")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class TicketTypesController {
     private final TicketTypeRepository ticketTypeRepository;
 

@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/api/login")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class LoginController {
     private final JwtUtils jwtUtils;
 

@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/api/films")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://clever-biscochitos-b5c563.netlify.app")
+@CrossOrigin("*")
 public class FilmsController {
 
     private final FilmRepository filmRepository;
