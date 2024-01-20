@@ -72,6 +72,7 @@ const NewRepertoireForm = ({modalOpened, onClose}:{modalOpened: boolean; onClose
                 .then((response) => response && mapToRepertoire(response))
                 .catch(() => setIsError(true));
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [startDate, endDate, time, cinemaHallNumber]);
 
     /**

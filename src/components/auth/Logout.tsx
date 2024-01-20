@@ -27,6 +27,7 @@ const Logout = () => {
                 })
                 .catch(() => setIsError(true));
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

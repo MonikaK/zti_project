@@ -13,6 +13,7 @@ const Header = () => {
 
     useEffect(() => {
         setLoggedIn(!!localStorage.getItem("sessionToken"));
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

@@ -131,6 +131,7 @@ const ReservationForm = ({
                 })
                 .catch((err) => console.log(err));
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     /** Fetch occupied seats for a given film and date when component mounts. */
@@ -144,6 +145,7 @@ const ReservationForm = ({
                 })
                 .catch((err) => console.log(err));
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dateChanged]);
 
     return (
