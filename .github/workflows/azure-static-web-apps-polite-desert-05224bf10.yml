@@ -20,7 +20,7 @@ jobs:
           submodules: true
           lfs: false
       - name: Run Unit Tests
-        run: yarn test
+        run: npm run test
 
       - name: Build And Deploy
         id: builddeploy
