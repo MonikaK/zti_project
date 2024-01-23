@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from "react";
 
 describe('Login form', () => {
-    it('<Login />', () => {
+    it('Should render Login page', () => {
         render(
             <BrowserRouter>
                 <Routes>

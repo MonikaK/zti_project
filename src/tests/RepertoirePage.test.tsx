@@ -20,7 +20,7 @@ describe('RepertoirePage component', () => {
         time: "18:00:00"
     };
 
-    it('<SingleReservation />', () => {
+    it('Should render SingleRepertoire component', () => {
         render(<SingleRepertoire {...mockRepertoire}/>);
 
         expect(screen.getByText((content, element) => {

@@ -16,7 +16,7 @@ describe('Reservations', () => {
         ticketType: "normalny"
     };
 
-    it('<SingleReservation />', () => {
+    it('Should render SingleReservation component', () => {
         render(<SingleReservation {...mockReservation}/>);
 
         expect(screen.getByText((content, element) => {
