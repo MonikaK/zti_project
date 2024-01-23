@@ -19,8 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Run Unit Tests
-        run: pwd
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
 
       - name: Build And Deploy
         id: builddeploy
