@@ -29,12 +29,6 @@ jobs:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
 
-      - name: Use Azure CLI
-        uses: azure/cli@v1
-        with:
-          azcliversion: 2.0.72
-          inlineScript: 'az group show -n CinemaAppMK'
-
       - name: Login to Azure
         uses: azure/login@v1
         with:
