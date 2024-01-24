@@ -18,7 +18,6 @@ jobs:
       - name: Set up Java version
         uses: actions/setup-java@v1
         with:
-          distribution: "temurin"
           java-version: '17'
 
       - name: Build with Maven
@@ -29,6 +28,12 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
+
+      - name: Use Azure CLI
+        uses: azure/cli@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: 'az group show -n CinemaAppMK'
 
       - name: Login to Azure
         uses: azure/login@v1
@@ -54,6 +59,6 @@ jobs:
           app-name: 'CinemaAppAzure'
           slot-name: 'Production'
           azure-subscription: d09cd68b-c52a-457a-ac99-595738d8e914
-          service-name:
+          service-name: asa-ls4bjeuhtpcma-standard
           use-staging-deployment: false
           package: '${{ github.workspace }}/**/*.jar'

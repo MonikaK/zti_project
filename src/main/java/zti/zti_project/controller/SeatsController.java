@@ -14,7 +14,7 @@ import zti.zti_project.repository.SeatsRepository;
 @RequestMapping("/api/seats")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin("*")
+@CrossOrigin("https://polite-desert-05224bf10.4.azurestaticapps.net")
 public class SeatsController {
     private final SeatsRepository seatsRepository;
 

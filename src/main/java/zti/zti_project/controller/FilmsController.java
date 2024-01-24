@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/api/films")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin("*")
+@CrossOrigin("https://polite-desert-05224bf10.4.azurestaticapps.net")
 public class FilmsController {
 
     private final FilmRepository filmRepository;
