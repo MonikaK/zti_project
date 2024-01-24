@@ -30,6 +30,11 @@ jobs:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
 
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -43,11 +48,12 @@ jobs:
         with:
           name: java-app
 
-      - name: Deploy to Azure Spring Apps
-        id: deploy-to-spring-apps
+      - name: Deploy to Azure Spring Apps production
         uses: azure/spring-apps-deploy@v1
         with:
           app-name: 'CinemaAppAzure'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_37384C760F014F16A92241B00C6116EE }}
-          package: '*.jar'
+          azure-subscription: d09cd68b-c52a-457a-ac99-595738d8e914
+          service-name:
+          use-staging-deployment: false
+          package: '${{ github.workspace }}/**/*.jar'
