@@ -29,8 +29,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Run Tests
-        run: npm test
-        timeout-minutes: 5
+        run: npm test && q
 
       - name: Build Production
         run: npm run build
