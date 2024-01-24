@@ -53,7 +53,7 @@ jobs:
       - name: Deploy to Azure Spring Apps production
         uses: azure/spring-apps-deploy@v1
         with:
-          app-name: cinema-app-azure
+          app-name: cinema-app
           azure-subscription: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           service-name: asa-ls4bjeuhtpcma-standard
           use-staging-deployment: false
