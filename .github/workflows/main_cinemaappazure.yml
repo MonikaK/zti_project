@@ -8,7 +8,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-
+echo: ${{ secrets.AZURE_CREDENTIALS }}.subscription_id
 jobs:
   build:
     runs-on: ubuntu-latest
