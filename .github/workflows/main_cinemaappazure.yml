@@ -43,9 +43,11 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-spring-apps.outputs.spring-app-url }}
+#      url: ${{ steps.deploy-to-spring-apps.outputs.spring-app-url }}
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Login to Azure
         uses: azure/login@v1
         with:
