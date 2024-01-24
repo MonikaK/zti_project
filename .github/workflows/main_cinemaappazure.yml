@@ -32,7 +32,10 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          auth-type: IDENTITY
+          client-id: ${{ secrets.AZURE_CREDENTIALS }}.client_id
+          subscription_id: ${{ secrets.AZURE_CREDENTIALS }}.subscription_id
+          tenant_id: ${{ secrets.AZURE_CREDENTIALS }}.tenant_id
 
   deploy:
     runs-on: ubuntu-latest
