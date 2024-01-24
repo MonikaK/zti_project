@@ -37,7 +37,6 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-#          auth-type: IDENTITY
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,6 +46,13 @@ jobs:
       url: ${{ steps.deploy-to-spring-apps.outputs.spring-app-url }}
 
     steps:
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
@@ -58,6 +64,6 @@ jobs:
           app-name: 'CinemaAppAzure'
           slot-name: 'Production'
           azure-subscription: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          service-name: asa-ls4bjeuhtpcma-standard
+          service-name: 'asa-ls4bjeuhtpcma-standard'
           use-staging-deployment: false
           package: '${{ github.workspace }}/**/*.jar'
