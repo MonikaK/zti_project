@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/repertoire")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin("https://polite-desert-05224bf10.4.azurestaticapps.net")
+@CrossOrigin("https://calm-field-00d81680f.4.azurestaticapps.net")
 public class RepertoireController {
     private final RepertoireRepository repertoireRepository;
     private final RepertoireToRepertoireResponseMapper repertoireToRepertoireResponseMapper;
