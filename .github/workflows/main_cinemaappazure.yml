@@ -55,7 +55,7 @@ jobs:
         with:
           app-name: 'CinemaAppAzure'
           slot-name: 'Production'
-          azure-subscription: d09cd68b-c52a-457a-ac99-595738d8e914
+          azure-subscription: ${{ secrets.AZURE_CREDENTIALS }}.subscription_id
           service-name: asa-ls4bjeuhtpcma-standard
           use-staging-deployment: false
           package: '${{ github.workspace }}/**/*.jar'
