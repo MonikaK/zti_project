@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Tests
         run: npm test
-        timeout-seconds: 6
+        timeout-minutes: 1
 
       - name: Build Production
         run: npm run build
