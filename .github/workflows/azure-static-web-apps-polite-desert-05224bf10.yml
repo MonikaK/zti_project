@@ -30,6 +30,10 @@ jobs:
 
       - name: Run Tests
         run: npm test
+        timeout-minutes: 5
+
+      - name: Build Production
+        run: npm run build
 
       - name: Build, Run Tests And Deploy
         id: builddeploy
