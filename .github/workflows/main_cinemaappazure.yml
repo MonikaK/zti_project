@@ -45,7 +45,7 @@ jobs:
 
       - name: Deploy to Azure Spring Apps
         id: deploy-to-spring-apps
-        uses: azure/spring-apps-deploy@v2
+        uses: azure/spring-apps-deploy@v1
         with:
           app-name: 'CinemaAppAzure'
           slot-name: 'Production'
